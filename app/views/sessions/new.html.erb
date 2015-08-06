@@ -1,0 +1,18 @@
+<h1>Login</h1>
+
+<br>
+
+
+<%= form_tag '/login' do %>
+
+	<% flash.each do |name, msg| %>
+	      <%= content_tag :div, msg, class: name %>
+	<% end %>
+	
+	<br>
+
+  	Email: <%= text_field_tag :email %>
+  	Password: <%= password_field_tag :password %>
+  	<%= submit_tag "Submit" %>
+
+<% end %>
